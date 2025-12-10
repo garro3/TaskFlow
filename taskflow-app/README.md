@@ -23,6 +23,12 @@ Run on a different port
 mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
 ```
 
+si le port est deja occuper 
+```bash
+sudo netstat -tulpn | grep :8080
+sudo kill -9 <PID>
+```
+
 Credentials (development)
 - The project contains a development account configured in `src/main/resources/application.properties`.
 - Default dev credentials (only for local development): `admin` / `admin`.
