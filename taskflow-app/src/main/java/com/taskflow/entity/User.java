@@ -49,8 +49,9 @@ public class User { // Déclaration de la classe User
 
     @PrePersist // Méthode appelée avant l'insertion en base (création)
     protected void onCreate() {
-        createdAt = LocalDateTime.now(); // Initialise la date de création
-        updatedAt = LocalDateTime.now(); // Initialise aussi la date de modification
+        LocalDateTime now = LocalDateTime.now();
+        createdAt = now; // Initialise la date de création
+        updatedAt = now; // Initialise aussi la date de modification
     }
 
     @PreUpdate // Méthode appelée avant chaque mise à jour en base
